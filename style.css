@@ -568,7 +568,7 @@ a, button {
 
 /*Contact Us Section*/
 .csec {
-	background: linear-gradient(to right, #FA4B37, #DF2771);
+	background: linear-gradient(to right, #b41e0d, #b90b51);
 	background-attachment: fixed; 
 	position: absolute;
 	width: 100%;
@@ -618,7 +618,7 @@ a, button {
 	font-weight: 600;
 }
 .imp {
-	color: red;
+	color: rgb(223, 5, 5);
 }
 form textarea {
 	width: 100%;
@@ -700,6 +700,7 @@ form textarea {
 	text-align: center;
 }
 .identity h6 {
+	padding-top: 50%;
 	width: 150px;
 	text-align: center;
 }
@@ -823,6 +824,9 @@ footer {
 	color: #E5E8EF;
 	background: #000D;
 	padding: 50px 0; 
+}
+footer a{
+	color: white;
 }
 footer .footer-container {
 	max-width: 1300px;

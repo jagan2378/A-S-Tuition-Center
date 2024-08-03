@@ -166,3 +166,14 @@ function scrollAppear() {
     }
     side++;
   }
+
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const mailtoLink = `mailto:ast.arivusolai@gmail.com?subject=Contact Form Submission&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+            window.location.href = mailtoLink;
+        });
+    

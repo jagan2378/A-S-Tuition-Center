@@ -355,23 +355,36 @@ a, button {
 }
 .cbox .det {
 	width: 250px;
-	height: 80px;
+	height: 95px;
 	margin: 10px;
 	background: #fff;
 	cursor: pointer;
-}
-.cbox .det {
 	justify-content: space-around;
 	width: 250px;
-	padding: 28px;
+	padding: 25px;
 	border-radius: 10px;
 	border: 1px solid #FA4B37;
-	font-size: 15px;
+	font-size: 16px;
 	color: #272529;
 	font-family: cursive;
 	text-decoration: none;
+	
 }
-.cbox .det  {
+.course {
+    text-align: center;
+}
+
+.det {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.text {
+    display: block;
+    padding-bottom: 20px;
+}
+
+.cbox .det{
 	background: linear-gradient(to right, #FA4B37, #DF2771);
 	color: white;
 }
@@ -379,9 +392,10 @@ a, button {
 	filter: brightness(100);
 }
 .cbox img {
-	width: 35px;
-	margin-right: 35px;
+	width: 30px;
+	margin-right: 20px;
 	border-radius: 50%;
+	
 }
 
 /*TEAM SECTION*/
@@ -589,7 +603,7 @@ a, button {
 .cc {
 	height: 400px;
 	width: 400px;
-	height: 500px;
+	height: 600px;
 	border-radius: 10px;
 	justify-content: center;
 	box-shadow: 1px 1px 20px rgba(0,0,0,0.4);
@@ -700,7 +714,7 @@ form textarea {
 	text-align: center;
 }
 .identity h6 {
-	padding-top: 50px;
+	padding-top: 50%;
 	width: 150px;
 	text-align: center;
 }
@@ -826,7 +840,7 @@ footer {
 	padding: 50px 0; 
 }
 footer a{
-	color:#FFFFFF;
+	color: white;
 }
 footer .footer-container {
 	max-width: 1300px;

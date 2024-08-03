@@ -167,19 +167,33 @@ function scrollAppear() {
     side++;
   }
 
- document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('submit', async function(event) {
             event.preventDefault();
-            
-            const fname = document.getElementById('fname').value;
-            const lname = document.getElementById('lname').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            const additional = document.getElementById('additional').value;
-            
-            const mailtoLink = `mailto:ast.arivusolai@gmail.com?subject=Contact Form Submission&body=First Name: ${fname}%0D%0ALast Name: ${lname}%0D%0AEmail: ${email}%0D%0AMessage: ${message}%0D%0AAdditional Details: ${additional}`;
-            
-            window.location.href = mailtoLink;
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('send_email.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    alert('Email sent successfully!');
+                } else {
+                    throw new Error('Email sending failed.');
+                }
+            } catch (error) {
+                alert(error.message);
+            }
         });
+
+
  document.getElementById('contactForm1').addEventListener('submit', function(event) {
             event.preventDefault();
             

@@ -168,12 +168,14 @@ function scrollAppear() {
   }
 
 
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
+ document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
+            
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            const mailtoLink = `mailto:ast.arivusolai@gmail.com?subject=Contact Form Submission&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+            const phone = document.getElementById('phone').value;
+            const additional = document.getElementById('additional').value;
+            
+            const mailtoLink = `mailto:ast.arivusolai@gmail.com?subject=Contact Form Submission&body=Name: ${name}%0D%0APhone: ${phone}%0D%0AAdditional Details: ${additional}`;
+            
             window.location.href = mailtoLink;
         });
-    

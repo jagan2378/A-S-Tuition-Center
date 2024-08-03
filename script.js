@@ -167,8 +167,20 @@ function scrollAppear() {
     side++;
   }
 
-
  document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('lname').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const additional = document.getElementById('additional').value;
+            
+            const mailtoLink = `mailto:ast.arivusolai@gmail.com?subject=Contact Form Submission&body=First Name: ${fname}%0D%0ALast Name: ${lname}%0D%0AEmail: ${email}%0D%0AMessage: ${message}%0D%0AAdditional Details: ${additional}`;
+            
+            window.location.href = mailtoLink;
+        });
+ document.getElementById('contactForm1').addEventListener('submit', function(event) {
             event.preventDefault();
             
             const name = document.getElementById('name').value;
